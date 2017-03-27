@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Source+Serif+Pro:400,600,700');
+
+
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+@mixin sans() {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+@mixin sans-light() {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+@mixin sans-bold() {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+@mixin serif() {
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 600;
+}
+
+.serif {
+  @include serif;
+}
