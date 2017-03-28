@@ -17,7 +17,7 @@
 %noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
+  // -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -26,8 +26,11 @@
 $breakpoints: (
   xl: (min-width: 1600px),
   l: (max-width: 1200px),
+  min-l: (min-width: 1201px),
   m: (max-width: 880px),
+  min-m: (min-width: 880px),
   s: (max-width: 700px),
+  min-xs: (min-width: 421px),
   xs: (max-width: 420px)
 );
 @mixin bp($name) {
@@ -57,4 +60,11 @@ $breakpoints: (
 body {
   margin: 0;
   padding: 0;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }

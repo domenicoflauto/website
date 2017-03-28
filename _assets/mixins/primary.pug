@@ -1,0 +1,37 @@
+mixin social(name, url)
+  li.soc
+    a(href=url)
+      i(class="fa fa-"+name)
+
+mixin links(name, url)
+  li.link
+    a(href=url)=name
+
+mixin color-card(name, code, c,m,y,k,r,g,b)
+  .color-card
+    .pig(class=name)
+    .info
+      span.name= name
+      span.code= code
+      span.cmyk
+        strong C&nbsp;
+        = c
+        br
+        strong M&nbsp;
+        = m
+        br
+        strong Y&nbsp;
+        = y
+        br
+        strong K&nbsp;
+        = k
+      span.rgb
+        strong R&nbsp;
+        = r
+        br
+        strong G&nbsp;
+        = g
+        br
+        strong B&nbsp;
+        = b
+        

@@ -11,6 +11,98 @@
 // @import "grid";
 
 .container {
-  width: 100%;
-  background-color: pink;
+  padding-top: 60px;
+}
+
+@include bp(min-l) {
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+    // background-color: pink;
+  }
+  header {
+    width: 1170px;
+    margin: 0 auto;
+  }
+  // section.about {
+  //   // position: relative;
+  //   // height: 400px;
+  //   .greatings {
+  //     // position: absolute;
+  //     right: 400px;
+  //   }
+  // }
+  footer {
+    width: 1170px;
+  }
+}
+
+
+@include bp(l) {
+  .container {
+    width: 100%;
+    // background-color: lightCoral;
+  }
+  header {
+    width: 100% !important;
+  }
+  footer {
+    width: 100%;
+  }
+}
+
+// @include bp(min-m) {
+//   section.about {
+//     position: relative;
+//     height: 400px;
+//     .greatings {
+//       position: absolute;
+//       right: 200px;
+//     }
+//   }
+// }
+
+
+@include bp(min-xs){
+  .logo {
+    margin: 20px 0 auto auto;
+  }
+  footer {
+    height: 60px;
+    // span:not(:last-child):after {
+    //   content: "|";
+    // }
+    ul {
+      float: right;
+      // border: 1px solid white;
+    }
+  }
+}
+
+@include bp(xs){
+  .logo {
+    margin: 20px auto ;
+  }
+  .social {
+    span {
+      display: none;
+    }
+  }
+  footer {
+    height: 80px;
+    span{
+      box-sizing: border-box;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      margin: 10px 0 15px -20px;
+
+      display: block;
+      text-align: center;
+    }
+    ul {
+      text-align: center;
+      padding-left: 0;
+    }
+  }
 }

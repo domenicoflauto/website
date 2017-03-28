@@ -1,0 +1,34 @@
+include mixins/primary
+
+doctype html
+head
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(charset="utf-8")
+  title Domenico Flauto
+  link(rel='stylesheet', href='_assets/style/app.css')
+body
+  .container
+    header
+      .social
+        div
+          a(href='https://www.linkedin.com/in/domenicoflauto/')
+            img(src='_assets/logos/linkedin-grey.svg')
+            span connect
+        div
+          a(href='https://twitter.com/DomenicoFlauto')
+            img(src='_assets/logos/twitter-grey.svg')
+            span follow
+      .logo
+        span domenico<strong>flauto</strong>
+    block content      
+    footer
+      span &emsp;2017 &copy; Domenico Flauto&emsp;
+
+      ul
+        +social('facebook-official','https://uk.linkedin.com/in/domenicoflauto')
+        +social('instagram','https://uk.linkedin.com/in/domenicoflauto')
+        +social('linkedin','https://uk.linkedin.com/in/domenicoflauto')
+        +social('twitter','https://uk.linkedin.com/in/domenicoflauto')
+        +social('dribbble','https://uk.linkedin.com/in/domenicoflauto')
+        +social('medium','https://uk.linkedin.com/in/domenicoflauto')
+        +social('behance','https://uk.linkedin.com/in/domenicoflauto')
