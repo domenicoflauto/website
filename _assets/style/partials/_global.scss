@@ -25,13 +25,18 @@
 
 $breakpoints: (
   xl: (min-width: 1600px),
+  desktop-hd: (min-width: 881px) and (max-width: 1200px),
   l: (max-width: 1200px),
   min-l: (min-width: 1201px),
+  desktop: (min-width: 701px) and (max-width: 880px),
   m: (max-width: 880px),
-  min-m: (min-width: 880px),
+  min-m: (min-width: 881px),
+  tablet: (min-width: 421px) and (max-width: 700px),
   s: (max-width: 700px),
-  min-xs: (min-width: 421px),
-  xs: (max-width: 420px)
+  min-s: (min-width: 701px),
+  mobile: (max-width: 420px),
+  xs: (max-width: 420px),
+  min-xs: (min-width: 421px)
 );
 @mixin bp($name) {
   $value: map-get($breakpoints, $name);
@@ -46,6 +51,9 @@ $breakpoints: (
   }
 }
 
+@mixin debug($color) {
+  border: 1px solid ($color);
+}
 
 // ::selection {
 //   background: rgb(50, 50, 50);

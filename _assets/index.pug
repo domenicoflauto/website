@@ -1,26 +1,51 @@
-extend base
+extend _base
 block content
+  //- .debugtext
+  //-   span.desktop-hd DESKTOP-HD | min: 881px &amp; max: 1200px 
+  //-   span.desktop DESKTOP | min: 701px &amp; max: 880px 
+  //-   span.tablet TABLET | min: 421px &amp; max: 700px 
+  //-   span.mobile MOBILE | max: 420px 
+    
+  
   section.about
-    .greatings
-      h1 Hi there.
+    .greatings  
+      h1.animated.pulse Domenico Flauto
+      h3 Visual &amp; Web Designer
       p
-        | I’m Domenico Flauto, <br>
-        | UI/UX designer and front end developer<br>
-        | based in London, made in Italy.<br>
-        | Omnivorous and coffee addicted.<br>
+        | <strong>UI/UX design</strong> // <strong>Web and interaction design</strong>&nbsp;//
+        | <strong>Front&#8209;End&nbsp;development</strong>&nbsp;//&nbsp;<strong>Visual&nbsp;Communication</strong> <br>
+        | Based in London, Made in Italy.
+        | Omnivorous&nbsp;and&nbsp;coffee&nbsp;addicted.<br><br>
+        i.fa.fa-bolt
+        span &nbsp; Open to new contract opportunities 
+        a(href="#contacts")
+          span.hire-me Hire&nbsp;Me
+        //- span &nbsp; Basically <strong>I make things</strong>.
+      //- h1 Hi there.
+      //- p
+      //-   | I’m Domenico Flauto, <br>
+      //-   | UI/UX designer and front end developer<br>
+      //-   | based in London, made in Italy.<br>
+      //-   | Omnivorous and coffee addicted.<br>
         
-      br
-      br
-      br
-      br
   section.works
     h2 Case studies
-    img(src="_assets/logos/sw_extended.svg", alt="")
-    img(src="_assets/logos/mc_extended.svg", alt="")
+    a(href='sweetway.html')
+      .case.sw
+        h1 Sweetway
+        h4 2016
+        .cover
+        //- img(src="_assets/logos/sw_extended.svg", alt="")
+    a(href='mobicity.html')
+      .case.mc
+        h1 Mobicity
+        h4 2015
+        .cover
+        //- img(src="_assets/logos/mc_extended.svg", alt="")
 
-  section.contacts
-    h2 Contacts
-    p Please contact me and bla bla bla
+  section.contacts#contacts
+    h2 Get in touch
+    //- p To get in touch 
     br
     a(href="tel:+447518996909")
       i.fa.fa-phone

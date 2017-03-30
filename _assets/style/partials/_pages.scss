@@ -3,19 +3,29 @@ section {
   box-sizing: border-box;
   padding: 40px;
   h1 {
-    font-size: 3em;
-    color: $col-Astral;
+    font-family: Source Serif Pro, serif;
+    font-weight: 700;
+    font-size: 2.2em;
+    color: #333333;
     margin: 0;
     margin-top: 100px;
   }
   h2 {
     margin: 0;
-    color: $col-Berry;
+    color: $col-Astral;
+    }
+  h3 {
+    margin: 0;
+    margin-top: -3px;
+    color: $col-Astral;
+    font-weight: 600;
   }
   p {
+    color: #666666;
     font-size: 1em;
     font-weight: lighter;
     margin: 0;
+    margin-top: 5px;
   }
 }
 
@@ -24,27 +34,120 @@ section {
 section.about {
   // margin-left: 40px;
   height: 400px;
+  &:hover {
+    i {
+    animation: flash 1s;
+    // color: orange;
+    }
+  }
+  p {
+    border-top: 1px solid #999999;
+  }
+  i {
+    color: $col-Astral;
 
+  }
+  .hire-me {
+    box-sizing: border-box;
+    padding: 0.3em 0.5em;
+    border-radius: 1em;
+    font-size: 0.9em;
+    text-align: center;
+    border: 1px solid $col-Astral;
+    background-color: $col-Astral;
+    color: #ffffff;
+    margin-left: 0.5em;
+    text-transform: uppercase;
+    font-weight: 400;
+    &:hover {
+      background-color: darken($col-Astral,10%);
+    }
+    &:active {
+      background-color: lighten($col-Astral,10%);
+    }
+  }
 }
 
 
 section.works {
-  // background-color: LightCoral;
-  height: 400px;
-  img {
-    display: block;
-    margin: 100px auto;
+  box-sizing: border-box;
+
+  // border: 2px solid LightCoral;
+  // height: 400px;
+
+  .case {
+    box-sizing: border-box;
+    // border: 1px solid red;
+    display: inline-block;
+    position: relative;
+    margin-top: 40px;
+    height: 323px;
+    padding: 20px;
+    box-shadow: 3px 3px 10px #D6D6D6;
+    &:hover {
+      box-shadow: 3px 3px 10px #AAAAAA;
+      .cover {
+        background-color: transparentize($col-Astral, 0.4);
+      }
+      h1 {
+        color: $col-Astral;
+      }
+    }
+
+    h1 {
+      margin: 0;
+      // padding-bottom: 50px;
+    }
+    h4 {
+      margin: 0;
+      margin-top: -10px;
+      font-size: 1em;
+      font-weight: 400;
+      color: #666666;
+    }
+    .cover {
+      width: 100%;
+      height: 150px;
+      margin-top: 100px;
+      position: absolute;
+      left: 0;
+    }
+    img {
+      border: 1px solid blue;
+      // display: block;
+      // margin: 0 auto;
+    }
+  }
+  .mc {
+    border-top: 5px solid #7DB0C0;
+    .cover {
+      background-image: url("../images/mobicity/mc-cover.png");
+      background-blend-mode: lighten;
+      background-position: center;
+      background-size: cover;
+    }
   }
 
+
+  .sw {
+    border-top: 5px solid $col-Yello;
+    .cover {
+      background-image: url("../images/sweetway/sw-cover.png");
+      background-blend-mode: lighten;
+      background-position: center;
+      background-size: cover;
+    }
+  }
 }
 
 section.contacts {
   height: 400px;
+  // h1:focus { animation-name: bounce; }
   i {
     margin-bottom: 10px;
     span {
       @include sans;
-      font-size: 1em;
+      font-size: 1.05em;
       font-weight: 300;
     }
   }
@@ -56,6 +159,12 @@ section.contacts {
     padding: 20px;
     .cs-logo {
       background: url('../logos/sw_extended.svg') no-repeat;
+      width: 140px;
+      height: 40px;
+      margin: 20px auto;
+    }
+    .cs-logo2 {
+      background: url('../logos/mc_extended.svg') no-repeat;
       width: 140px;
       height: 40px;
       margin: 20px auto;
@@ -80,7 +189,7 @@ section.contacts {
 
   width: 460px;
   margin: 20px auto;
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
   padding: 40px;
   h1 {
     margin: 0;
@@ -99,6 +208,10 @@ section.contacts {
     margin-top: 5px;
     font-weight: 200;
     font-size: 1.2em;
+    em {
+      font-style: normal;
+
+    }
   }
   img{
     padding-top: 20px;
@@ -113,21 +226,48 @@ section.contacts {
 }
 
 #sketches {
-  width:100%;
+  width: 100%;
   height: 250px;
-  background-color: DeepPink;
+  // background-color: DeepPink;
   background-image: url("../images/sketches.png");
   background-blend-mode: lighten;
   background-position: center;
   background-size: cover;
-  position: absolute;
+  // position: absolute;
   margin: 0;
-  left: 0;
+  // left: 0;
   margin-top: 10px;
 }
 
+#mc-cover {
+  width: 100%;
+  height: 250px;
+  background-image: url("../images/mobicity/mc-cover.png");
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.cs.meta {
+  position: relative;
+  margin-top: -40px;
+  padding-top: 0;
+  span {
+    line-height: 1.2;
+    font-weight: 300;
+    strong {
+      font-weight: 800;
+      color: #666666;
+    }
+  }
+  i {
+    font-size: 0.8em;
+  }
+}
+
 .cs.overview{
-  margin-bottom: 220px;
+  // margin-bottom: 220px;
   margin-top: -20px
 }
 
@@ -241,38 +381,27 @@ section.contacts {
 
 }
 
-@include max-screen(446px) {
-  .colors {
-    box-sizing: border-box;
-    width: 270px !important;
+
+.thanks {
+  // @include debug(gold);
+  h6 {
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  span {
+    text-align: center;
     margin: 0 auto;
-
   }
-  .color-card {
-    display: inline-block;
-    width: 120px;
+  i {
+    margin-right: 0.4em;
   }
-  .pig {
-    width: 20px !important;
-  }
-  .info {
-    width: 100px !important;
-  }
-}
-
-
-@include max-screen(450px) {
-  section {
-    width: 100% !important;
-    h1, h2 {
-      font-size: 0.95em;
-
-    }
-    p {
-      font-size: 0.95em;
-    }
-    .fit {
-      max-width: 100% !important;
-    }
+  a{
+    // @include debug(red);
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
   }
 }

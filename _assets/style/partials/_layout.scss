@@ -1,87 +1,131 @@
-// @import "neat/neat";
-//
-// $neat-grid: (
-//   columns: 12,
-//   gutter: 20px,
-// );
-// body {
-//   @include grid-visual;
-// }
-
-// @import "grid";
-
 .container {
   padding-top: 60px;
 }
 
 @include bp(min-l) {
-  .container {
-    width: 1170px;
-    margin: 0 auto;
-    // background-color: pink;
-  }
-  header {
+  .container,
+  header,
+  footer {
     width: 1170px;
     margin: 0 auto;
   }
-  // section.about {
-  //   // position: relative;
-  //   // height: 400px;
-  //   .greatings {
-  //     // position: absolute;
-  //     right: 400px;
-  //   }
-  // }
-  footer {
-    width: 1170px;
-  }
-}
-
-
-@include bp(l) {
   .container {
-    width: 100%;
-    // background-color: lightCoral;
+    padding: 0 20px;
   }
-  header {
-    width: 100% !important;
+  .greatings {
+    width: 30em;
+    // margin: 0 auto;
+    h1 { font-size: 2.2em; }
+    // h3 { font-size: 1.1em; }
+    // span { font-size: 0.95em; }
+    p { font-size: 1.1em; }
   }
-  footer {
-    width: 100%;
-  }
-}
-
-// @include bp(min-m) {
-//   section.about {
-//     position: relative;
-//     height: 400px;
-//     .greatings {
-//       position: absolute;
-//       right: 200px;
-//     }
-//   }
-// }
-
-
-@include bp(min-xs){
-  .logo {
-    margin: 20px 0 auto auto;
-  }
-  footer {
-    height: 60px;
-    // span:not(:last-child):after {
-    //   content: "|";
-    // }
-    ul {
-      float: right;
-      // border: 1px solid white;
+  .case {
+    width: 500px;
+    &:nth-child(1) {
+      margin-left: 15px;
     }
   }
 }
 
-@include bp(xs){
+@media screen and (min-width: 881px) and (max-width: 1200px) {
+  .container,
+  header,
+  footer {
+    width: 850px;
+    margin: 0 auto;
+  }
+  .greatings {
+    width: 30em;
+    // margin: 0 auto;
+    h1 { font-size: 2.2em; }
+    // h3 { font-size: 1.1em; }
+    // span { font-size: 1.1em; }
+    p { font-size: 1.2em; }
+  }
+  .case {
+    width: 370px;
+    &:nth-child(1) {
+      margin-left: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 880px) {
+
+  .container,
+  header,
+  footer {
+    width: 670px;
+    margin: 0 auto;
+  }
+  .greatings {
+    width: 27em;
+    // margin: 0 auto;
+    h1 { font-size: 2.2em; }
+    // h3 { font-size: 1.1em; }
+    span { font-size: 1em; }
+    p { font-size: 1.1em; }
+  }
+  .case {
+    width: 280px;
+    &:nth-child(1) {
+      margin-left: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 421px) and (max-width: 700px) {
+  .container,
+  header,
+  footer {
+    width: 100%;
+  }
+  .greatings {
+    width: 21em;
+    // margin: 0 auto;
+    h1 { font-size: 2.2em; }
+    // h3 { font-size: 1.1em; }
+    span { font-size: 0.95em; }
+    p { font-size: 1em; }
+  }
+  .case {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+// FROM 421PX
+// min-xs: (min-width: 421px)
+@include bp(min-xs){
+  // footer {
+  //   height: 60px;
+  //   ul {
+  //     float: right;
+  //   }
+  // }
   .logo {
-    margin: 20px auto ;
+    margin: 20px 20px auto auto;
+    span.min {display: none; }
+    span.ext {display: block; }
+  }
+
+
+}
+
+
+@media screen and (max-width: 420px) {
+
+  .container,
+  header,
+  footer {
+    width: 100%;
+  }
+
+  .logo {
+    margin: 20px -30px auto auto;
+    span.min {display: block; }
+    span.ext {display: none; }
   }
   .social {
     span {
@@ -89,7 +133,7 @@
     }
   }
   footer {
-    height: 80px;
+    height: 60px;
     span{
       box-sizing: border-box;
       width: 100%;
@@ -103,6 +147,58 @@
     ul {
       text-align: center;
       padding-left: 0;
+    }
+  }
+  .greatings {
+    width: 18em;
+    h1 { font-size: 2em; }
+    h3 { font-size: 1.1em; }
+    span { font-size: 0.85em; }
+    p { font-size: 0.9em; }
+  }
+  .case {
+    width: 100%;
+  }
+
+}
+
+
+
+
+//REVIEW IT!
+
+@include max-screen(446px) {
+  .colors {
+    box-sizing: border-box;
+    width: 270px !important;
+    margin: 0 auto;
+
+  }
+  .color-card {
+    display: inline-block;
+    width: 120px;
+  }
+  .pig {
+    width: 20px !important;
+  }
+  .info {
+    width: 100px !important;
+  }
+}
+
+
+@include max-screen(450px) {
+  .cs {
+    width: 100% !important;
+    h1, h2 {
+      font-size: 0.95em;
+
+    }
+    p {
+      font-size: 0.95em;
+    }
+    .fit {
+      max-width: 100% !important;
     }
   }
 }

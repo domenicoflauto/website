@@ -1,55 +1,75 @@
-extend base
+extend _base
 block content
-    .header
-      .cs-logo
-      span.label Case Study
-    .cs.overview
-      h1 Overview
-      p
-        | Sweetway is a small company based in London that offers airport transfers and generally medium-long journeys across the UK.
-        <br>
-        | I led the design project and I developed the related web-app, drawing attention to the user experience and the responsiveness.
-      #sketches
-    
-    
-    .cs.corporate-identity
-      h1 Corportate identity
-      p
-        | The first step was build a strong brand and design a well-rounded identity. <br> So I started with the logo.
-      h2 Logo
-      p
-        | Very first atom of the corporate identity, geometric, simply made by 2 graphic elements.
-      img(src="_assets/images/logo_sketches.png" alt="Logo sketches")
-      img(src="_assets/images/logo-comfort_area0.svg" alt="Logo comfort area")
-
-      h2 Color
-      p
-        | The color choice is related to some [...]
-      .colors
-        +color-card('Yello','#ffe100','2.5','7.5','90.0','0.0','255','225','0')
-        +color-card('Astral','#33697F','80','43.8','34.3','19.4','51','105','127')
-        +color-card('Grey','#D6D6D6','18.6','13.3','14.5','0.3','214','214','214')
-        +color-card('Berry','#E50065','0.6','98.3','30.5','0.0','229','0','101')
-        +color-card('Greena','#12B290','74.6','0.0','54.5','0.0','18','178','144')
-        +color-card('Black','#000000', '0.0','0.0','0.0','100.0','0','0','0')
+  .header
+    .cs-logo
+    span.label Case Study
+  .cs.overview
+    h1 Overview
+    p
+      | Sweetway is a small company based in London that offers airport transfers and generally medium-long journeys across the UK.
+      <br>
+      | I led the design project and I developed the related web-app, drawing attention to the user experience and the responsiveness.
+    #sketches
       
-      h2 Typography
-      p
-        | Open Sans is a fresh and modern font, that matches very well with the design.
-      img(src="_assets/images/pangram.svg" alt="App Mock-up")
-      img(src="_assets/images/font01.svg" alt="App Mock-up")
-      span.note Open Sans — Light 
-      img(src="_assets/images/font02.svg" alt="App Mock-up")
-      span.note Open Sans — Regular 
+  .cs.meta
+    span <strong>Title</strong> Sweetway <br>
+    span <strong>Date</strong> 2016 <br>
+    span <strong>Company</strong> Sweet Way Ltd <br>
+    span <strong>Type</strong> product design <br>
+    a(href='http://www.sweetway.co.uk')
+      span www.sweetway.co.uk &nbsp;
+      i.fa.fa-external-link
 
-      img(src="_assets/images/font03.svg" alt="App Mock-up")
-      span.note Open Sans — Semibold 
+  
+  .cs.corporate-identity
+    h1 Corportate identity
+    p
+      | The first step was build a strong brand and design a well-rounded identity. <br> So I started with the logo.
+    h2 Logo
+    p
+      | Very first atom of the corporate identity, geometric, simply made by 2 graphic elements.
+    img(src="_assets/images/logo_sketches.png" alt="Logo sketches")
+    img(src="_assets/images/logo-comfort_area0.svg" alt="Logo comfort area")
 
-        
-    .cs.web-app
-      h1 Web-app
-      p
-        | The website has been developed from scratch and written in Pug for the HTML, styled with the preprocessor SASS for the CSS and with a bunch of javascript and jQuery function
-        img.fit(src="_assets/images/app_sketches.png" alt="App sketches")
-        img.fit(src="_assets/images/mockup01.png" alt="App Mock-up")
+    h2 Color
+    p
+      | The color choice is related to key values like freshness, technology and innovation.
+    .colors
+      +color-card('Yello','#ffe100','2.5','7.5','90.0','0.0','255','225','0')
+      +color-card('Astral','#33697F','80','43.8','34.3','19.4','51','105','127')
+      +color-card('Grey','#D6D6D6','18.6','13.3','14.5','0.3','214','214','214')
+      +color-card('Berry','#E50065','0.6','98.3','30.5','0.0','229','0','101')
+      +color-card('Greena','#12B290','74.6','0.0','54.5','0.0','18','178','144')
+      +color-card('Black','#000000', '0.0','0.0','0.0','100.0','0','0','0')
+    
+    h2 Typography
+    p
+      | Open Sans is a fresh and modern font, that matches very well with the other elements. 
+    img(src="_assets/images/pangram.svg" alt="Open Sans — Pangram")
+    img(src="_assets/images/font01.svg" alt="Open Sans — Light")
+    span.note Open Sans — Light 
+    img(src="_assets/images/font02.svg" alt="Open Sans — Regular ")
+    span.note Open Sans — Regular 
+
+    img(src="_assets/images/font03.svg" alt="Open Sans — Semibold")
+    span.note Open Sans — Semibold 
+
       
+  .cs.web-app
+    h1 Web-app
+    p
+      | The website has been developed from scratch and written in Pug(formerly Jade)/HTML, styled with SASS/CSS and with a bunch of javascript and jQuery functions.
+      img.fit(src="_assets/images/app_sketches.png" alt="App sketches")
+      img.fit(src="_assets/images/mockup01.png" alt="App Mock-up")
+    
+  .cs
+    .thanks
+      h6 Thanks for your attention!
+      a(href="#") 
+        i.fa.fa-chevron-up
+        | Top 
+      a(href="index.html")
+        i.fa.fa-chevron-left
+        | Go Back
+
+    
